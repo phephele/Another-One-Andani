@@ -1,0 +1,37 @@
+---
+title: 'Assignment 3'
+author: "Andani"
+date: "July 17, 2016"
+output: github_document
+---
+## Hello Octocat
+I love octocat. she's the coolest cat in town.
+![](https://dl.dropboxusercontent.com/u/11805474/painblogr/biostats/images/octocat.png)
+
+```{r quick look, echo=TRUE}
+data("anscombe")
+dim(anscombe)
+names(anscombe)
+head(anscombe, n=6)
+tail(anscombe, n=6)
+summary(anscombe)
+
+```
+
+
+
+```{r xy plot, echo=FALSE, fig.height=8, fig.width=8, fig.align='center', fig.path='./figures/', fig.ext='svg'}
+data("anscombe")
+plot(x=anscombe$x1, y=anscombe$y1)
+abline(lm(y1 ~ x1, data = anscombe))
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
